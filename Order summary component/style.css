@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+  --Pale-blue: hsl(225, 100%, 94%);
+  --Bright-blue: hsl(245, 75%, 52%);
+  --Very-pale-blue: hsl(225, 100%, 98%);
+  --Desaturated-blue: hsl(224, 23%, 55%);
+  --Dark-blue: hsl(223, 47%, 23%);
+  font-family: 'Red Hat Display', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background: url(images/pattern-background-desktop.svg) repeat-x;
+  background-color: var(--Pale-blue);
+}
+
+main {
+  background-color: white;
+  max-width: 22rem;
+  border-radius: 15px;
+  box-shadow: 0 15px 50px -25px var(--Dark-blue);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  text-align: center;
+}
+
+.heading {
+  font-size: 1.6rem;
+}
+
+.paragraph {
+  font-size: 0.9rem;
+  padding: 0.61rem;
+}
+
+.annual-plan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Very-pale-blue);
+  max-width: max-content;
+  border-radius: 12px;
+  padding: 0.7rem 0.3rem;
+  margin-top: 1rem;
+  font-size: 0.8rem;
+}
+
+.hero-image {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.music-icon,
+.annual-plan-text,
+.change {
+  width: max-content;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.change {
+  padding-left: 4rem;
+  color: var(--Bright-blue);
+}
+
+.annual-plan-heading {
+  color: var(--Dark-blue);
+  font-weight: 900;
+}
+
+.annual-plan-price,
+.paragraph {
+  color: var(--Desaturated-blue);
+}
+.music-icon {
+  max-width: 3rem;
+}
+button {
+  margin: 1.2rem;
+  padding: 0.7rem 5rem;
+  min-width: max-content;
+  border-radius: 10px;
+  border: none;
+  background-color: var(--Bright-blue);
+  color: white;
+  box-shadow: 0 10px 30px -10px var(--Bright-blue);
+}
+
+.cancel {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: var(--Desaturated-blue);
+  font-weight: 700;
+}
+
+footer {
+  text-align: center;
+  margin: 2rem;
+  font-size: 0.8rem;
+  color: var(--Desaturated-blue);
+}
+footer a {
+  color: var(--Bright-blue);
+}
+
+@media (max-width: 370px) {
+  main {
+    max-width: 14rem;
+  }
+  .annual-plan {
+    padding: 0.5rem 0.1rem;
+    margin-top: 0.1rem;
+    font-size: 0.65rem;
+  }
+  .change {
+    padding-left: 2rem;
+  }
+
+  .paragraph {
+    font-size: 0.6rem;
+  }
+  .heading {
+    font-size: 0.9rem;
+  }
+  .container {
+    padding: 1rem;
+  }
+  button {
+    margin: 0.5rem;
+    padding: 0.5rem 3.3rem;
+    font-size: 0.65rem;
+    border-radius: 8px;
+  }
+
+  .cancel {
+    font-size: 0.65rem;
+  }
+}
