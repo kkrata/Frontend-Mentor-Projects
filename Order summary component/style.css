@@ -79,6 +79,10 @@ main {
   padding-left: 4rem;
   color: var(--Bright-blue);
 }
+.change:hover {
+  text-decoration: none;
+  cursor: pointer;
+}
 
 .annual-plan-heading {
   color: var(--Dark-blue);
@@ -103,11 +107,21 @@ button {
   box-shadow: 0 10px 30px -10px var(--Bright-blue);
 }
 
+button:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
 .cancel {
   text-decoration: none;
   font-size: 0.8rem;
   color: var(--Desaturated-blue);
   font-weight: 700;
+}
+
+.cancel:hover {
+  cursor: pointer;
+  color: var(--Dark-blue);
 }
 
 footer {
