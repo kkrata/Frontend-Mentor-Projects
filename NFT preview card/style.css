@@ -7,7 +7,7 @@
   --White: hsl(0, 0%, 100%);
   --Soft-blue: hsl(215, 51%, 70%);
   --Cyan: hsl(178, 100%, 50%);
-  --Soft-blue-transparent: hsla(215, 51%, 70%, 0.6);
+  --Soft-blue-transparent: hsla(215, 51%, 70%, 0.2);
   --shadow: rgb(29, 28, 28);
 }
 
@@ -57,10 +57,21 @@ main {
   bottom: 5px;
   left: 0;
   right: 0;
-  background: url(images/icon-view.svg) no-repeat center;
   background-color: var(--Cyan);
   border-radius: 10px;
-  opacity: 0.5;
+  opacity: 0.3;
+}
+
+.img-container:hover::after {
+  content: ' ';
+  z-index: 1;
+  position: absolute;
+  top: 25px;
+  bottom: 5px;
+  left: 0;
+  right: 0;
+  background: url(images/icon-view.svg) no-repeat center;
+  border-radius: 10px;
 }
 
 .heading {
