@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+  --dark-cyan: hsl(185, 75%, 39%);
+  --desaturated-blue: hsl(229, 23%, 23%);
+  --dark-blue: hsl(227, 10%, 46%);
+  --gray: hsl(0, 0%, 59%);
+  --transparent-grey: hsla(0, 0%, 59%, 0.6);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  font-family: 'Kumbh Sans', sans-serif;
+  background: url(images/bg-pattern-bottom.svg) right -30rem top 20rem no-repeat
+      fixed,
+    url(images/bg-pattern-top.svg) left -35rem bottom 10rem no-repeat fixed;
+  background-size: 80rem;
+  background-color: var(--dark-cyan);
+}
+
+.container,
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  background-color: white;
+  border-radius: 12px;
+}
+.profile {
+  background-image: url(images/bg-pattern-card.svg);
+  background-repeat: repeat-x;
+  padding: 4rem 6rem 0.5rem 6rem;
+  border-radius: 12px;
+}
+
+img {
+  border: 5px solid white;
+  border-radius: 50%;
+  background-color: white;
+  margin-top: 2rem;
+}
+
+h1 {
+  font-size: 1.2rem;
+  padding-top: 1rem;
+}
+
+h1::after {
+  content: '26';
+  color: var(--gray);
+  font-weight: lighter;
+  padding-left: 0.6rem;
+  font-size: 1.2rem;
+}
+hr {
+  width: 100%;
+  margin-top: 1rem;
+  color: var(--transparent-grey);
+  opacity: 0.4;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+  text-align: center;
+  padding: 1.5rem;
+}
+
+h1,
+.number {
+  color: var(--desaturated-blue);
+}
+
+.city,
+.category {
+  color: var(--gray);
+  padding-top: 0.4rem;
+}
+.number {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.category {
+  font-size: 0.7rem;
+}
+
+.attribution {
+  margin-top: 2rem;
+  color: var(--desaturated-blue);
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--desaturated-blue);
+}
+
+@media (max-width: 1500px) {
+  body {
+    background: url(images/bg-pattern-bottom.svg) right -40rem top 20rem no-repeat
+        fixed,
+      url(images/bg-pattern-top.svg) left -40rem bottom 10rem no-repeat fixed;
+    background-size: 80rem;
+    background-color: var(--dark-cyan);
+  }
+}
+@media (max-width: 1000px) {
+  body {
+    background: url(images/bg-pattern-bottom.svg) right -50rem top 20rem no-repeat
+        fixed,
+      url(images/bg-pattern-top.svg) left -50rem bottom 10rem no-repeat fixed;
+    background-size: 80rem;
+    background-color: var(--dark-cyan);
+  }
+}
+@media (max-width: 600px) {
+  body {
+    background: url(images/bg-pattern-bottom.svg) right -60rem top 20rem no-repeat
+        fixed,
+      url(images/bg-pattern-top.svg) left -65rem bottom 10rem no-repeat fixed;
+    background-size: 80rem;
+    background-color: var(--dark-cyan);
+  }
+  h1 {
+    white-space: nowrap;
+  }
+
+  .profile {
+    padding: 1rem 4rem;
+  }
+
+  img {
+    margin-top: 4rem;
+  }
+}
