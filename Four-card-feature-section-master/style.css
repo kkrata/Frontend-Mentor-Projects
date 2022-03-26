@@ -35,7 +35,7 @@ main {
 
 .main-grid {
   grid-column: span 3;
-  max-width: 28rem;
+  max-width: 30rem;
 }
 
 .first-grid-item {
@@ -58,27 +58,27 @@ main {
   text-align: left;
   padding: 1rem 1.5rem;
   position: relative;
-  min-height: 12rem;
+  min-height: 14rem;
   background-color: white;
   box-shadow: 0 0.5rem 1rem 0 var(--Blue-transparent);
   line-height: 2;
-  max-width: 17rem;
+  max-width: 19rem;
   margin: auto;
   margin-top: 2rem;
 }
 
 .main-paragraph {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: 200;
 }
 
 .heading {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   color: var(--Very-Dark-Blue);
 }
 
 .paragraph {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   padding-top: 1rem;
   color: var(--Grayish-Blue);
   font-weight: 400;
@@ -86,18 +86,17 @@ main {
 
 .icon {
   position: absolute;
-  top: 7rem;
+  top: 8rem;
   right: 1.5rem;
-  max-width: 3rem;
 }
 
 .heading-grid {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   color: var(--Very-Dark-Blue);
 }
 
 .paragraph-grid {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   color: var(--Grayish-Blue);
 }
 
@@ -131,14 +130,17 @@ main {
   }
 
   .second-grid-item {
+    margin-top: 0.8rem;
   }
 
   .third-grid-item {
-    grid-row: span 2;
-    align-self: center;
+    grid-column-start: 2;
   }
 
   .forth-grid-item {
-    grid-column-start: 2;
+    grid-column-start: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    align-self: center;
   }
 }
