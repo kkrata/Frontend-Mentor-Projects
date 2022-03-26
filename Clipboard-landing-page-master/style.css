@@ -21,17 +21,18 @@ body {
   align-items: center;
   text-align: center;
   justify-content: center;
-  background: url(images/bg-header-mobile.png) no-repeat top;
+  background: url(images/bg-header-mobile.png) repeat-x top;
+  background-size: contain;
+  min-height: 100vh;
 }
 
-main,
-footer {
+main {
   margin: 1.9rem;
 }
 
 .section-1-logo {
   margin: 2rem;
-  margin-top: 5rem;
+  margin-top: 8rem;
 }
 .main-heading {
   font-size: 2rem;
@@ -144,6 +145,10 @@ button:hover {
   margin-top: 1rem;
 }
 
+footer {
+  width: 100%;
+}
+
 .footer {
   background-color: var(--Light-Grayish-Blue);
   padding-block: 2.5rem;
@@ -190,9 +195,9 @@ li {
   color: var(--Grayish-Blue);
 }
 
-@media (min-width: 700px) {
+@media (min-width: 1000px) {
   body {
-    background: url(images/bg-header-desktop.png) no-repeat top;
+    background: url(images/bg-header-desktop.png) repeat-x top;
     background-size: contain;
   }
 
@@ -236,7 +241,7 @@ li {
     text-align: left;
     margin-left: 5rem;
     align-self: center;
-    min-width: 40rem;
+    min-width: 20rem;
   }
 
   .section-heading {

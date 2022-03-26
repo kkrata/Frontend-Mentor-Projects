@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+
+:root {
+  --Pale-Violet: hsl(276, 100%, 81%);
+  --Moderate-Violet: hsl(276, 55%, 52%);
+  --Desaturated-Dark-Violet: hsl(271, 15%, 43%);
+  --Grayish-Blue: hsl(206, 6%, 79%);
+  --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+  --Dark-Grayish-Violet: hsl(270, 7%, 64%);
+  --Light-Magenta: hsl(293, 100%, 63%);
+  --Light-Violet: hsl(264, 100%, 61%);
+  --White: hsl(0, 0%, 100%);
+  --Light-Grayish-Violet: hsl(270, 20%, 96%);
+  --Very-Dark-Desaturated-Violet: hsl(271, 36%, 24%);
+  --Very-Light-Magenta: hsl(289, 100%, 72%);
+  font-family: 'Rubik', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--Light-Grayish-Violet);
+}
+
+.phone {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Light-Grayish-Violet);
+  max-width: 20rem;
+  max-height: 35rem;
+  border-radius: 35px;
+  justify-content: center;
+  align-items: center;
+  border: 15px solid var(--White);
+}
+
+.white-space {
+  background-color: var(--White);
+  width: 8rem;
+  height: 1rem;
+  margin: auto;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.user-container {
+  background: linear-gradient(90deg, var(--Light-Violet), var(--Light-Magenta));
+  width: 100%;
+  height: 5rem;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.user-container-1 {
+  display: flex;
+}
+
+.user {
+  flex-direction: column;
+  margin-top: 1rem;
+  align-items: center;
+}
+
+.avatar {
+  max-width: 2rem;
+  max-height: 2rem;
+  border-radius: 50%;
+  border: 1px solid var(--White);
+  margin-right: 0.8rem;
+  margin-left: 0.5rem;
+  margin-top: 1.2rem;
+}
+
+.name {
+  color: var(--White);
+}
+
+.available {
+  font-size: 0.7rem;
+  color: var(--Pale-Violet);
+}
+
+.fa-solid {
+  align-self: center;
+  margin-top: 1.3rem;
+  color: var(--White);
+}
+
+.fa-angle-left {
+  margin-left: 0.9rem;
+}
+
+.fa-ellipsis-vertical {
+  margin-left: 5rem;
+}
+
+img {
+  max-width: 2rem;
+}
+
+.text-left {
+  display: flex;
+  align-items: flex-start;
+  background-color: var(--Very-Light-Magenta);
+  border-radius: 15px;
+  border-bottom-left-radius: 4px;
+  margin: 0.7rem;
+  max-width: 12rem;
+}
+
+.text-right {
+  display: flex;
+  flex-direction: ;
+  align-items: flex-end;
+  max-width: 12rem;
+}
