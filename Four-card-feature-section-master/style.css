@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+:root {
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+  --Blue-transparent: hsla(212, 86%, 64%, 0.2);
+  --Very-Dark-Blue: hsl(234, 12%, 34%);
+  --Grayish-Blue: hsl(229, 6%, 66%);
+  --Very-Light-Gray: hsl(0, 0%, 98%);
+  font-family: 'Poppins', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Very-Light-Gray);
+  min-height: 100vh;
+}
+
+main {
+  text-align: center;
+  margin: 1rem 2rem;
+  margin-bottom: 0;
+}
+
+.main-grid {
+  grid-column: span 3;
+  max-width: 28rem;
+}
+
+.first-grid-item {
+  border-top: 4px solid var(--Cyan);
+}
+
+.second-grid-item {
+  border-top: 4px solid var(--Red);
+}
+
+.third-grid-item {
+  border-top: 4px solid var(--Orange);
+}
+
+.forth-grid-item {
+  border-top: 4px solid var(--Blue);
+}
+
+.item {
+  text-align: left;
+  padding: 1rem 1.5rem;
+  position: relative;
+  min-height: 12rem;
+  background-color: white;
+  box-shadow: 0 0.5rem 1rem 0 var(--Blue-transparent);
+  line-height: 2;
+  max-width: 17rem;
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.main-paragraph {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.heading {
+  font-size: 1.5rem;
+  color: var(--Very-Dark-Blue);
+}
+
+.paragraph {
+  font-size: 0.85rem;
+  padding-top: 1rem;
+  color: var(--Grayish-Blue);
+  font-weight: 400;
+}
+
+.icon {
+  position: absolute;
+  top: 7rem;
+  right: 1.5rem;
+  max-width: 3rem;
+}
+
+.heading-grid {
+  font-size: 1.1rem;
+  color: var(--Very-Dark-Blue);
+}
+
+.paragraph-grid {
+  font-size: 0.7rem;
+  color: var(--Grayish-Blue);
+}
+
+.attribution {
+  font-size: 0.8rem;
+  text-align: center;
+  color: var(--Very-Dark-Blue);
+  margin-top: 1rem;
+}
+
+.attribution a {
+  color: var(--Blue);
+}
+
+@media (min-width: 730px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+  }
+  .item {
+    margin: 0;
+  }
+  .main-grid {
+    place-self: center;
+  }
+
+  .first-grid-item {
+    grid-row: span 2;
+    align-self: center;
+  }
+
+  .second-grid-item {
+  }
+
+  .third-grid-item {
+    grid-row: span 2;
+    align-self: center;
+  }
+
+  .forth-grid-item {
+    grid-column-start: 2;
+  }
+}
