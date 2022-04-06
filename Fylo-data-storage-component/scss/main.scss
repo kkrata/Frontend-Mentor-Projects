@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+@import './variables';
+@import './attribution';
+
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+    
+}
+
+@mixin containerStyle {
+    background-color: $Dark-Blue;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+
+}
+
+@mixin mobile {
+    @media (min-width:800px){
+        @content;
+    }
+    
+}
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+min-height: 100vh;
+@include flexCenter(column);
+background: url("../images/bg-mobile.png") ;
+background-size: cover;
+background-repeat: repeat-y;
+font-family: 'Raleway', sans-serif; 
+
+
+    main{
+        @include mobile{
+        @include flexCenter(row);
+        }
+    }
+
+    .first-section{
+        @include containerStyle;
+        border-top-right-radius: 70px;
+        padding: 2rem;
+        padding-right: 8rem;
+
+        
+
+        .icons-container{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 1.5rem;
+            
+
+            .single-icon-container
+            {
+                background-color: $Very-Dark-Blue;
+                padding: .5rem;
+                min-height: 2.4rem;
+                display: flex;
+                flex-basis: 25%;
+                border-radius: 5px;
+            
+                img{
+                    margin: auto;
+                }
+            }
+
+         
+        }
+    }
+    @include mobile{
+        .first-section{
+            margin-right: 1.5rem;
+        }
+    }
+
+    .second-section{
+    @include containerStyle;
+    color: $Pale-Blue;
+    font-weight: 400;
+    font-size: .8rem;
+    padding: 1.6rem;
+    position: relative;
+    
+
+        a{
+            text-decoration: none;
+            color: $Pale-Blue;
+            font-weight: 700;
+
+        }
+
+        .gb-left{
+            display: flex;
+            background-color: white;
+            border-radius: 8px;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            left: 4rem;
+            top: 7rem;
+
+            .number{
+                color: $Very-Dark-Blue;
+                font-weight: 700;
+                font-size: 2rem;
+                padding: .5rem;
+            }
+
+            .gb-text {
+                font-size: .7rem;
+                font-weight: 700;
+                padding-right: 1rem;
+                color: $Grayish-Blue;
+            }
+
+            }
+            @include mobile{
+                .gb-left{
+                    top:-2.5rem;
+                    left: 18.5rem;
+                    min-width: 9rem;
+                    position: absolute;
+                    
+
+                    &::after{
+                        content: ' ';
+                        width: 0px;
+                        height: 0px;
+                        border-top: 10px solid transparent;
+                        border-left: 10px solid transparent;
+                        border-bottom: 10px solid transparent;
+                        border-right: 2rem solid white;
+                        position: absolute;
+                        left: 6.35rem;
+                        top: 81%;
+                    }
+                    }
+
+
+       
+        }
+
+        .second-section-container{
+            display: flex;
+            justify-content: space-between;
+            padding-bottom: 1.5rem;
+        }
+
+        .slider{
+            background-color: $Very-Dark-Blue;
+            min-width: 10rem;
+            min-height: 1rem;
+            border-radius: 10px;
+            margin-block: .8rem;
+            position: relative;
+
+            .slider-color{
+                min-width: 80%;
+                background-image: linear-gradient(to right, $Gradient , $Gradient-1);
+                border-radius: 10px;
+                padding: .4rem;
+                position: absolute;
+                top: .13rem;
+                left: .13rem;
+            }
+
+            .slider-icon{
+                background-color: white;
+                border-radius: 10px;
+                padding: .3rem;
+                position: absolute;
+                top: .1rem;
+                left: 11.4rem;
+            }
+
+            @include mobile{
+                .slider-icon{
+                    left: 20rem;
+                }
+            }
+              
+        }
+
+        @include mobile{
+            .slider{
+            min-width: 26rem;
+        }
+        
+        }    
+    }
+    @include mobile{
+        .second-section{
+        min-width: max-content;
+        align-self: end;    }
+    }    
+
+
+
+
+
+    footer{
+        margin: 2rem;
+    }
+
+}
+
+@include mobile{
+    body{
+        background: url("../images/bg-desktop.png") no-repeat bottom right;
+        background-color: $Very-Dark-Blue;
+        background-size: 100vw 55vh;
+    }
+    
+}
+
+
+
