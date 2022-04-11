@@ -1,0 +1,31 @@
+.description{
+    margin: 1rem;
+    text-align: center;
+    z-index: 1;
+
+    .heading{
+        font-weight: 500;
+        font-size: 2.7rem;
+        margin-block: 1.5rem;
+        color: $Very-Dark-Desaturated-Violet ;
+    }
+
+    .paragraph{
+        color: $Dark-Grayish-Violet;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        padding-inline: .6rem;
+    }
+
+  
+}
+
+@include mobile{
+    .description{
+        max-width: 30rem;
+        text-align: left;
+        margin-left: 8rem;
+    }
+
+   
+}

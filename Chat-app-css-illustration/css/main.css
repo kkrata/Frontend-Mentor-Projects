@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+  font-family: "Rubik", sans-serif;
+  background-color: #f5f3f7;
+  position: relative;
+}
+
+body main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body main .background-violet {
+  position: absolute;
+  width: 17rem;
+  height: 40rem;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#e942ff), to(#8838ff));
+  background-image: linear-gradient(to bottom, #e942ff, #8838ff);
+  top: 0;
+  left: -4rem;
+  border-bottom-right-radius: 20rem;
+  border-bottom-left-radius: 20rem;
+  z-index: 0;
+}
+
+@media (min-width: 980px) {
+  body main .background-violet {
+    min-width: 30rem;
+    min-height: 30rem;
+  }
+  body main .background-gray {
+    min-width: 20rem;
+    min-height: 30rem;
+  }
+}
+
+body main .background-gray {
+  position: absolute;
+  width: 12rem;
+  height: 35rem;
+  background-color: rgba(229, 215, 239, 0.3);
+  z-index: 0;
+  right: 0;
+  bottom: 0;
+  border-top-left-radius: 60rem;
+  background-size: cover;
+}
+
+@media (min-width: 980px) {
+  body main {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.phone {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 2rem;
+  min-width: 19rem;
+  border: 0.65rem solid white;
+  border-radius: 40px;
+  max-height: 38.3rem;
+  -webkit-box-shadow: 0 0 0.9rem 0.2rem rgba(62, 39, 83, 0.2);
+          box-shadow: 0 0 0.9rem 0.2rem rgba(62, 39, 83, 0.2);
+  z-index: 1;
+  background-color: #f5f3f7;
+}
+
+.phone .user-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-image: -webkit-gradient(linear, left top, right top, from(#8838ff), to(#e942ff));
+  background-image: linear-gradient(to right, #8838ff, #e942ff);
+  position: relative;
+  color: white;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+}
+
+.phone .user-container .white-space {
+  background-color: white;
+  width: 8rem;
+  height: 1rem;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  position: absolute;
+  left: 4.85rem;
+  top: -.1rem;
+}
+
+.phone .user-container .user-container-1 {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding-block: 1rem;
+  margin-top: .8rem;
+  line-height: 1.5;
+}
+
+.phone .user-container .user-container-1 .avatar {
+  max-width: 1.7rem;
+  max-height: 1.7rem;
+  border-radius: 50%;
+  margin-left: 2rem;
+  margin-right: .5rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  border: 1.5px solid white;
+}
+
+.phone .user-container .user-container-1 .name {
+  font-size: .8rem;
+}
+
+.phone .user-container .user-container-1 .available {
+  font-size: .55rem;
+  color: #d89eff;
+}
+
+.phone .user-container .fa-angle-left, .phone .user-container .fa-ellipsis-vertical {
+  position: absolute;
+  top: 2.3rem;
+  color: white;
+}
+
+.phone .user-container .fa-angle-left {
+  left: 1rem;
+}
+
+.phone .user-container .fa-ellipsis-vertical {
+  left: 16.5rem;
+}
+
+.phone .text-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: (fr)[8];
+      grid-template-rows: repeat(8, fr);
+  margin: .5rem;
+}
+
+.phone .text-container .text {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  margin-block: .4rem;
+  font-size: .6rem;
+  padding: .5rem;
+  border-radius: 15px;
+  line-height: 1.4;
+}
+
+.phone .text-container .text-left {
+  background-color: #e5d7ef;
+  max-width: 11rem;
+  border-bottom-left-radius: 5px;
+  color: #9241c8;
+}
+
+.phone .text-container .text-right {
+  background-color: white;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  max-width: 11rem;
+  border-bottom-right-radius: 5px;
+  -webkit-box-shadow: 0 0.2rem 0.9rem -0.3rem #a39daa;
+          box-shadow: 0 0.2rem 0.9rem -0.3rem #a39daa;
+  color: #6e5d7e;
+}
+
+.phone .text-container .text-right:nth-last-of-type(2) {
+  margin-bottom: 1rem;
+}
+
+.phone .text-container .message {
+  background-color: white;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-radius: 30px;
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.phone .text-container .message p {
+  color: #c6cacd;
+  padding-left: .6rem;
+  padding-top: .4rem;
+  font-size: .7rem;
+}
+
+.phone .text-container .message i {
+  position: absolute;
+  top: .3rem;
+  left: 14.5rem;
+}
+
+.phone .text-container .dog-image {
+  max-width: 2.5rem;
+  float: right;
+  margin: .3rem;
+  margin-top: .7rem;
+  border-radius: 10px;
+}
+
+.phone .text-container .time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 13rem;
+  position: relative;
+  min-height: 2.5rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-image: -webkit-gradient(linear, left top, right top, from(#e942ff), to(#8838ff));
+  background-image: linear-gradient(to right, #e942ff, #8838ff);
+  color: white;
+}
+
+.phone .text-container .time .price {
+  position: absolute;
+  left: 9.9rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.phone .text-container .time .circle {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  outline: 1px solid white;
+  margin-right: 1rem;
+}
+
+.description {
+  margin: 1rem;
+  text-align: center;
+  z-index: 1;
+}
+
+.description .heading {
+  font-weight: 500;
+  font-size: 2.7rem;
+  margin-block: 1.5rem;
+  color: #3e2753;
+}
+
+.description .paragraph {
+  color: #a39daa;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  padding-inline: .6rem;
+}
+
+@media (min-width: 980px) {
+  .description {
+    max-width: 30rem;
+    text-align: left;
+    margin-left: 8rem;
+  }
+}
+
+footer {
+  z-index: 1;
+}
+
+footer .attribution {
+  margin: 1rem;
+  margin-top: 2rem;
+  color: #a39daa;
+  font-size: .8rem;
+}
+
+footer .attribution a {
+  color: #3e2753;
+}
+/*# sourceMappingURL=main.css.map */

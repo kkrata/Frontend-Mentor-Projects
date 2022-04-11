@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+@mixin mobile {
+  @media (min-width:980px) {
+    @content
+  }
+  
+}
+
+body{
+  @include flex(column);
+  min-height: 100vh;
+  font-family: $font-family;
+  background-color: $Light-Grayish-Violet;
+  position: relative;
+
+
+  main{
+    @include flex(column);
+
+    .background-violet{
+      position: absolute;
+      width: 17rem;
+      height: 40rem;
+      background-image:linear-gradient(to bottom , $Light-Magenta, $Light-Violet); 
+      top: 0;
+      left: -4rem;
+      border-bottom-right-radius: 20rem;
+      border-bottom-left-radius: 20rem;
+      z-index: 0;
+
+    }
+
+    @include mobile{
+      .background-violet{
+        min-width: 30rem;
+        min-height: 30rem;
+      }
+      .background-gray{
+        min-width: 20rem;
+        min-height: 30rem;
+      }
+
+
+    }
+    .background-gray{
+      position: absolute;
+      width:12rem;
+      height: 35rem;
+      background-color:$Lighter-Pale-Violet ;
+      z-index: 0;
+      right: 0;
+      bottom: 0;
+      border-top-left-radius: 60rem;
+      background-size: cover;
+    }
+  
+    }
+    
+    @include mobile{
+      main{
+        @include flex(row)
+      }
+   }
+
+}
+
+
+

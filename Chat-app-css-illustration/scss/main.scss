@@ -1,0 +1,22 @@
+@import './variables';
+@import './background';
+@import './phone_screen';
+@import './description';
+
+
+footer{
+    z-index: 1;
+
+    .attribution{
+        margin: 1rem;
+        margin-top: 2rem;
+        color: $Dark-Grayish-Violet;
+        font-size: .8rem;
+
+        a{
+            color: $Very-Dark-Desaturated-Violet;
+
+        }
+    }
+
+}
